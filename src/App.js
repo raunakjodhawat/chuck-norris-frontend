@@ -32,6 +32,7 @@ class App extends Component {
           <a href = "https://www.linkedin.com/in/jodhawat/">Raunak Jodhawat</a> ||  
           <a href = "https://github.com/raunakjodhawat">Git</a> ||
           <a href = "https://github.com/raunakjodhawat/jokes-apart-client">Fork this project</a>
+          <a href = "http://api.icndb.com/jokes/random/">Chuck Norris Jokes API</a>
         </p>
       </div>
     );
