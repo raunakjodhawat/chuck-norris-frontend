@@ -2,8 +2,9 @@ sudo: required
 services:
     - docker
 
-after_success:
-    - echo succesfull operation
+before_install:
+     - docker build -f Dockerfile.dev -t raunakjodhawat/chuck-norris-client:latest .
+
 deploy:
     edge: true
     provide: elasticbeanstalk
