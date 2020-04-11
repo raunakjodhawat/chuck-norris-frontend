@@ -1,8 +1,9 @@
 sudo: required
-language: Ruby
 services:
     - docker
 
+after_success:
+    - echo succesfull operation
 deploy:
     edge: true
     provide: elasticbeanstalk
