@@ -1,7 +1,8 @@
 FROM node:latest AS builder
 WORKDIR /chuckNorrisClient
 COPY ./package.json .
-RUN npm install
+RUN npm i fsevents@latest -f --save-optional
+RUN npm install --no-optional
 COPY . .
 RUN npm run build
 
