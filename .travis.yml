@@ -6,7 +6,7 @@ before_install:
      - docker build -t raunakjodhawat/chucknorris:latest .
 
 script:
-    - docker run -e CI=true raunakjodhawat/chuckNorris npm run test -- --coverage
+    - docker run -e CI=true raunakjodhawat/chucknorris npm run test -- --coverage
 
 deploy:
     edge: true
