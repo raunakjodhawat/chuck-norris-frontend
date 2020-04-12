@@ -14,8 +14,8 @@ deploy:
     region: us-east-2
     app: "Chuck Norris Jokes"
     env: "ChuckNorrisJokes-env"
-    bucket_name: "elasticbeanstalk-us-east-1-681334850105"
-    bucket_path: "docker-react"
+    bucket_name: "elasticbeanstalk-us-east-2-681334850105"
+    bucket_path: "docker-multi"
     on:
         branch: master
     access_key_id: $AWS_ACCESS_CODE
