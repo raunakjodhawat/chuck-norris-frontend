@@ -3,8 +3,7 @@ FROM node:latest AS build
 WORKDIR /chuckNorrisClient
 COPY ./package.json .
 RUN npm i fsevents@latest -f --save-optional
-RUN npm install --silent
-RUN npm install react-scripts@3.4.1 -g --silent
+RUN npm install
 COPY . .
 RUN npm run build
 
