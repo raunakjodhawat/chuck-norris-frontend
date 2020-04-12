@@ -12,8 +12,8 @@ deploy:
     edge: true
     provide: elasticbeanstalk
     region: "us-east-2"
-    app: "Chuck Norris Jokes"
-    env: "ChuckNorrisJokes-env"
+    app: "ChuckNorrisClient"
+    env: "Chucknorrisclient-env"
     bucket_name: "chuck-norris-elastic-bean"
     bucket_path: "chucktravis"
     on:
