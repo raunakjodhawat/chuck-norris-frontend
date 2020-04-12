@@ -1,4 +1,5 @@
-FROM node:latest AS builder
+FROM node:latest AS build
+
 WORKDIR /chuckNorrisClient
 COPY ./package.json .
 RUN npm i fsevents@latest -f --save-optional
@@ -9,4 +10,4 @@ RUN npm run build
 
 FROM nginx:alpine
 EXPOSE 80
-COPY --from=builder /chuckNorrisClient/build /usr/share/nginx/html
+COPY --from=build /chuckNorrisClient/build /usr/share/nginx/html
