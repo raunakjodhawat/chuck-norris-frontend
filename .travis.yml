@@ -3,7 +3,7 @@ services:
     - docker
 
 before_install:
-     - docker build -t raunakjodhawat/chucknorris:latest .
+     - docker build -f Dockerfile.dev -t raunakjodhawat/chucknorris:latest .
 
 script:
     - docker run -e CI=true raunakjodhawat/chucknorris npm run test -- --coverage
