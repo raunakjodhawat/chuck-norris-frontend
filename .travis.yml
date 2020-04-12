@@ -3,10 +3,10 @@ services:
     - docker
 
 before_install:
-     - docker build -f Dockerfile -t raunakjodhawat/chuck-norris-client:latest .
+     - docker build -t raunakjodhawat/chuckNorris:latest .
 
 script:
-    - docker run -e CI=true raunakjodhawat/chuck-norris-client npm run test -- --coverage
+    - docker run -e CI=true raunakjodhawat/chuckNorris npm run test -- --coverage
 
 deploy:
     edge: true
