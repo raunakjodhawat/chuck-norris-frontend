@@ -1,5 +1,5 @@
-FROM node:alpine As builder
-WORKDIR /chuck-norris-client
+FROM node:alpine AS builder
+WORKDIR /chuckNorrisClient
 COPY ./package.json .
 RUN npm install
 COPY . .
@@ -7,4 +7,4 @@ RUN npm run build
 
 FROM nginx
 EXPOSE 80
-COPY --from=builder /chuck-norris-client/build /usr/share/nginx/html
+COPY --from=builder /chuckNorrisClient/build /usr/share/nginx/html
