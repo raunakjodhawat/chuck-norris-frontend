@@ -1,6 +1,8 @@
-FROM node:alpine AS builder
+FROM node:latest AS builder
 WORKDIR /chuckNorrisClient
 COPY ./package.json .
+RUN npm cache clean --force
+RUN npm cache verify
 RUN npm install
 COPY . .
 RUN npm run build
